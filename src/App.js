@@ -45,13 +45,13 @@ function App() {
         </nav>
         <br/>
         <Routes>
-          <Route path="/" exact component= {Home}/>
-          <Route path="/pastries" exact component= {PastryList}/>
-          <Route path="/desserts" exact component= {DessertList}/>
-          <Route path="/breads" exact component= {BreadList}/>
-          <Route path="/chocolates" exact component= {ChocolateList}/>
-          <Route path="/create" exact component= {CreatePastry}/>
-          <Route path="/edit/:id" exact component= {EditPastry}/>
+          <Route path="/" element = {<Home/>} exact/>
+          <Route path="/pastries" element = {<PastryList/>}/>
+          <Route path="/desserts" element = {<DessertList/>}/>
+          <Route path="/breads" element = {<BreadList/>}/>
+          <Route path="/chocolates" element = {<ChocolateList/>}/>
+          <Route path="/create" element = {<CreatePastry/>}/>
+          <Route path="/edit/:id" element = {<EditPastry/>}/>
         </Routes>
       </div>
       <div>
