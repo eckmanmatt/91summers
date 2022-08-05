@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
+import {useState,useEffect} from 'react'
 
 import {BrowserRouter, Router, Routes, Route, Link } from "react-router-dom";
 
@@ -15,12 +16,15 @@ import ChocolateList from "./components/chocolate.component.js";
 
 
 function App() {
+
+  const [pastries, setPastries] = useState([])
+
   return (
     <BrowserRouter>
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <Link to="/" className="navbar-brand">91 Summers MERN-Stack</Link>
-          <div className="collpase navbar-collapse">
+          <div className="collapse navbar-collapse">
             <ul className="navbar-nav mr-auto">
               <li className="navbar-item">
                 <Link to="/" className="nav-link">Home</Link>
@@ -53,9 +57,6 @@ function App() {
           <Route path="/create" element = {<CreatePastry/>}/>
           <Route path="/edit/:id" element = {<EditPastry/>}/>
         </Routes>
-      </div>
-      <div>
-        <h1>TEST</h1>
       </div>
     </BrowserRouter>
   );
